@@ -25,7 +25,6 @@ public class IntStreamUtils {
         return IntStream.of(arrayInt).sum();
     }
     public int[] sortArrayInt(int... arrayInt){
-        IntStream intStream = IntStream.of(arrayInt).sorted();
-        return intStream.toArray();
+        return IntStream.of(arrayInt).sorted().toArray();
     }
 }
