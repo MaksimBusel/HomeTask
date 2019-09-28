@@ -2,31 +2,31 @@ package by.epam.arrays.utils;
 
 public class UtilsForArray {
 
-    public int findMinNumberInArray(int [] someArray) {
-        int minNumber = someArray[0];
-        for (int i = 1; i < someArray.length; i++) {
-            if (minNumber>someArray[i]) {
-                minNumber = someArray[i];
+    public int findMin(int [] array) {
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (min>array[i]) {
+                min = array[i];
             }
         }
-        return minNumber;
+        return min;
     }
 
-    public int findMaxNumberInArray(int [] someArray) {
-        int maxNumber = someArray[0];
-        for (int i = 1; i < someArray.length; i++) {
-            if (maxNumber < someArray[i]) {
-                maxNumber = someArray[i];
+    public int findMax(int [] array) {
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
             }
         }
-        return maxNumber;
+        return max;
     }
 
-    public int calculateSumNumbersArray(int [] someArray) {
-        int sumNumbers=0;
-        for (int i = 0; i <someArray.length ; i++) {
-            sumNumbers+=someArray[i];
+    public int calculateSum(int [] array) {
+        int sum=0;
+        for (int i = 0; i <array.length ; i++) {
+            sum+=array[i];
         }
-        return sumNumbers;
+        return sum;
     }
 }

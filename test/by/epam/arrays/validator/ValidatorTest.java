@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class ValidatorTest {
     private Validator validator;
 
@@ -16,15 +14,15 @@ public class ValidatorTest {
 
     @Test
     public void successPassCheckOnValidity() {
-        String forCheck = "2 22 234.1 32.1";
-        String[] resultValidation = validator.checkFileOnValidity(forCheck);
-        Assert.assertNotNull(resultValidation);
+        String forCheck = "24 -22 234.1 -32.1";
+        boolean resultValidation = validator.checkStringOnValidity(forCheck);
+        Assert.assertTrue(resultValidation);
     }
 
     @Test
     public void failedCheckOnValidity() {
         String forCheck = "2 22a 234.1 32.1";
-        String[] resultValidation = validator.checkFileOnValidity(forCheck);
-        Assert.assertNull(resultValidation);
+        boolean resultValidation = validator.checkStringOnValidity(forCheck);
+        Assert.assertFalse(resultValidation);
     }
 }

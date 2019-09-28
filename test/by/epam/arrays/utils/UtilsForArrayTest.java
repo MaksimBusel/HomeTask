@@ -18,19 +18,19 @@ public class UtilsForArrayTest {
 
     @Test
     public void findMinNumberInArray() {
-        int min = utilsForArray.findMinNumberInArray(arrayForCheck);
+        int min = utilsForArray.findMin(arrayForCheck);
         Assert.assertEquals(0, min);
     }
 
     @Test
     public void findMaxNumberInArray() {
-        int max = utilsForArray.findMaxNumberInArray(arrayForCheck);
+        int max = utilsForArray.findMax(arrayForCheck);
         Assert.assertEquals(245, max);
     }
 
     @Test
     public void calculateSumNumbersArray() {
-        int sum = utilsForArray.calculateSumNumbersArray(arrayForCheck);
+        int sum = utilsForArray.calculateSum(arrayForCheck);
         Assert.assertEquals(502, sum);
     }
 }

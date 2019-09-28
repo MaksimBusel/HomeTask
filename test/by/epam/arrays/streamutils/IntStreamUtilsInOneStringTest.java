@@ -1,11 +1,8 @@
 package by.epam.arrays.streamutils;
 
-import by.epam.arrays.utils.UtilsForArray;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class IntStreamUtilsInOneStringTest {
     private IntStreamUtilsInOneString intStreamUtilsInOneString;
@@ -18,25 +15,25 @@ public class IntStreamUtilsInOneStringTest {
 
     @Test
     public void findMinNumber() {
-        int min = intStreamUtilsInOneString.findMinNumber(arrayForCheck);
+        int min = intStreamUtilsInOneString.findMin(arrayForCheck);
         Assert.assertEquals(0,min);
     }
 
     @Test
     public void findMaxNumber() {
-        int max = intStreamUtilsInOneString.findMaxNumber(arrayForCheck);
+        int max = intStreamUtilsInOneString.findMax(arrayForCheck);
         Assert.assertEquals(245,max);
     }
 
     @Test
     public void findAverageNumbers() {
-        int average = intStreamUtilsInOneString.findAverageNumbers(arrayForCheck);
+        int average = intStreamUtilsInOneString.findAverage(arrayForCheck);
         Assert.assertEquals(74,average);
     }
 
     @Test
     public void findSumNumbers() {
-        int sum = intStreamUtilsInOneString.findSumNumbers(arrayForCheck);
+        int sum = intStreamUtilsInOneString.findSum(arrayForCheck);
         Assert.assertEquals(523,sum);
     }
 

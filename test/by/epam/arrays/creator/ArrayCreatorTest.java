@@ -1,11 +1,9 @@
 package by.epam.arrays.creator;
 
-import by.epam.arrays.exception.ExceptionSizeArray;
+import by.epam.arrays.exception.ArraySizeException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ArrayCreatorTest {
     ArrayCreator arrayCreator;
@@ -17,13 +15,13 @@ public class ArrayCreatorTest {
 
     @Test
     public void checkCorrectSizeArray() {
-        int sizeArray = 10;
-        int[] arrayForTest = arrayCreator.createArrayNeedSize(sizeArray);
-        Assert.assertEquals(10, arrayForTest.length);
+        int arraySize = 10;
+        int[] arrayTest = arrayCreator.createArray(arraySize);
+        Assert.assertEquals(10, arrayTest.length);
     }
 
-    @Test(expected = ExceptionSizeArray.class)
-    public void mustThrowExceptionSizeArray() {
-        int[] arrayForTest = arrayCreator.createArrayNeedSize(-1);
+    @Test(expected = ArraySizeException.class)
+    public void mustThrowArraySizeException() {
+        int[] arrayTest = arrayCreator.createArray(-1);
     }
 }

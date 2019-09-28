@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class ArraySorterTest {
     ArraySorter arraySorter;
     private int[] arrayForCheck = {212,12,32,0,245,1,21};
@@ -16,23 +14,23 @@ public class ArraySorterTest {
     }
 
     @Test
-    public void sortArraysMethodBubbles() {
+    public void checkBubbleSort() {
         int[] expected = {0,1,12,21,32,212,245};
-        int[] sort = arraySorter.sortArraysMethodBubbles(arrayForCheck);
+        int[] sort = arraySorter.bubbleSort(arrayForCheck);
         Assert.assertArrayEquals(expected,sort);
     }
 
     @Test
-    public void sortArraysMethodSelection() {
+    public void checkSelectionSort() {
         int[] expected = {0,1,12,21,32,212,245};
-        int[] sort = arraySorter.sortArraysMethodSelection(arrayForCheck);
+        int[] sort = arraySorter.selectionSort(arrayForCheck);
         Assert.assertArrayEquals(expected,sort);
     }
 
     @Test
-    public void sortArraysMethodInsertion() {
+    public void checkInsertionSort() {
         int[] expected = {0,1,12,21,32,212,245};
-        int[] sort = arraySorter.sortArraysMethodInsertion(arrayForCheck);
+        int[] sort = arraySorter.insertionSort(arrayForCheck);
         Assert.assertArrayEquals(expected,sort);
     }
 }

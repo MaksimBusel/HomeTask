@@ -2,43 +2,43 @@ package by.epam.arrays.sorter;
 
 public class ArraySorter {
 
-    public int[] sortArraysMethodBubbles(int[] needSortArray) {
-        for (int out = needSortArray.length-1; out >0; out--) {
+    public int[] bubbleSort(int[] array) {
+        for (int out = array.length-1; out >0; out--) {
             for (int in = 0; in < out; in++) {
-                if (needSortArray[in] > needSortArray[in+1]) {
-                    swapElementsArrays(needSortArray, in,in+1);
+                if (array[in] > array[in+1]) {
+                    swapElementsArrays(array, in,in+1);
                 }
             }
         }
-        return needSortArray;
+        return array;
     }
 
-    public int[] sortArraysMethodSelection(int[] needSortArray) {
+    public int[] selectionSort(int[] array) {
         int min;
-        int tmp;
-        for (int out = 0; out < needSortArray.length-1; out++){
+        int temp;
+        for (int out = 0; out < array.length-1; out++){
             min = out;
-            for (int in = out+1; in < needSortArray.length; in++){
-                if (needSortArray[in] < needSortArray[min])
+            for (int in = out+1; in < array.length; in++){
+                if (array[in] < array[min])
                     min = in;
             }
-            swapElementsArrays(needSortArray, min, out);
+            swapElementsArrays(array, min, out);
         }
-        return needSortArray;
+        return array;
     }
 
-    public int[] sortArraysMethodInsertion(int[] needSortArray)
+    public int[] insertionSort(int[] array)
    {
-        for (int i = 1; i < needSortArray.length; i++) {
-            int current = needSortArray[i];
+        for (int i = 1; i < array.length; i++) {
+            int current = array[i];
             int j = i - 1;
-            while(j >= 0 && current < needSortArray[j]) {
-                needSortArray[j+1] = needSortArray[j];
+            while(j >= 0 && current < array[j]) {
+                array[j+1] = array[j];
                 j--;
             }
-          needSortArray[j+1] = current;
+          array[j+1] = current;
         }
-        return needSortArray;
+        return array;
     }
 
     private void swapElementsArrays(int[] array, int moveForward, int moveBack) {
