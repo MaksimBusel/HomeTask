@@ -25,6 +25,7 @@ public class TxtReader {
                 }
             }
         } catch (IOException e) {
+            e.printStackTrace();
             throw new EmptyFileException("You are trying to verify an empty file!");
         }
         return doublesFromFile;
