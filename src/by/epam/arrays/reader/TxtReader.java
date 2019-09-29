@@ -20,7 +20,7 @@ public class TxtReader {
                 if (resultCheck) {
                     String[] stringValid = time.split(" ");
                     for (int i = 0; i <stringValid.length ; i++) {
-                        doublesFromFile.add(Double.valueOf(stringValid[i]));
+                        doublesFromFile.add(Double.valueOf(stringValid[i].trim()));
                     }
                 }
             }
