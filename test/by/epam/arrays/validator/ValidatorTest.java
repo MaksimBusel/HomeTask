@@ -13,7 +13,7 @@ public class ValidatorTest {
     }
 
     @Test
-    public void successPassCheckOnValidity() {
+    public void successCheckOnValidity() {
         String forCheck = "24 -22 234.1 -32.1";
         boolean resultValidation = validator.checkStringOnValidity(forCheck);
         Assert.assertTrue(resultValidation);
