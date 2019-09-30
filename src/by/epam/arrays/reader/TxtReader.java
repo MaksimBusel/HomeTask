@@ -1,7 +1,7 @@
 package by.epam.arrays.reader;
 
 import by.epam.arrays.exception.EmptyFileException;
-import by.epam.arrays.exception.MistakeReadException;
+import by.epam.arrays.exception.ReadException;
 import by.epam.arrays.validator.Validator;
 
 import java.io.BufferedReader;
@@ -31,7 +31,7 @@ public class TxtReader {
             throw new EmptyFileException("You are trying to verify an empty file!");
         } catch (NumberFormatException e) {
             e.printStackTrace();
-            throw new MistakeReadException();
+            throw new ReadException();
         }
         return doublesFromFile;
     }
