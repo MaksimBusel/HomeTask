@@ -1,6 +1,6 @@
 package by.epam.arrays.reader;
 
-import by.epam.arrays.exception.EmptyFileException;
+import by.epam.arrays.exception.FileEmptyException;
 import by.epam.arrays.validator.Validator;
 
 import java.io.BufferedReader;
@@ -27,7 +27,7 @@ public class TxtReader {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            throw new EmptyFileException("You are trying to verify an empty file!");
+            throw new FileEmptyException("You are trying to verify an empty file!");
         }
         return doublesFromFile;
     }
