@@ -1,4 +1,4 @@
-package by.epam.arrays.validator;
+package by.epam.task1.arrays.validator;
 
 
 public class Validator {

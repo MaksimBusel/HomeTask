@@ -1,7 +1,7 @@
-package by.epam.arrays.reader;
+package by.epam.task1.arrays.reader;
 
-import by.epam.arrays.exception.FileEmptyException;
-import by.epam.arrays.validator.Validator;
+import by.epam.task1.arrays.exception.FileEmptyException;
+import by.epam.task1.arrays.validator.Validator;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

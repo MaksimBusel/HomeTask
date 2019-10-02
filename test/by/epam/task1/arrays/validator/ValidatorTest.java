@@ -1,4 +1,4 @@
-package by.epam.arrays.validator;
+package by.epam.task1.arrays.validator;
 
 import org.junit.Assert;
 import org.junit.Before;

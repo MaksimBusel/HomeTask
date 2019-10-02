@@ -1,6 +1,6 @@
-package by.epam.arrays.creator;
+package by.epam.task1.arrays.creator;
 
-import by.epam.arrays.exception.ArraySizeException;
+import by.epam.task1.arrays.exception.ArraySizeException;
 
 import java.util.Random;
 

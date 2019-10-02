@@ -1,4 +1,4 @@
-package by.epam.arrays.sorter;
+package by.epam.task1.arrays.sorter;
 
 public class ArraySorter {
 

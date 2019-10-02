@@ -1,11 +1,8 @@
-package by.epam.arrays.utils;
+package by.epam.task1.arrays.utils;
 
-import by.epam.arrays.utils.UtilsForArray;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class UtilsForArrayTest {
     private UtilsForArray utilsForArray;

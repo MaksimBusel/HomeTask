@@ -1,4 +1,4 @@
-package by.epam.arrays.utils;
+package by.epam.task1.arrays.utils;
 
 public class UtilsForArray {
 

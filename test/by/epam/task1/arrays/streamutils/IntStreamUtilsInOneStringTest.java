@@ -1,4 +1,4 @@
-package by.epam.arrays.streamutils;
+package by.epam.task1.arrays.streamutils;
 
 import org.junit.Assert;
 import org.junit.Before;
