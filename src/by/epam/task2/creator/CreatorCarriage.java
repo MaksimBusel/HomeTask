@@ -11,19 +11,21 @@ import java.util.List;
 
 public class CreatorCarriage {
 
-    public List<PassengerCarriage> createCarriages() {
-        TxtReader txt = new TxtReader();
+    public List<PassengerCarriage> createCarriages(List arguments) {
         List<PassengerCarriage> passengerCarriages = new ArrayList<>();
-        List arguments = txt.getArgumentsForCarriage();
         for (int i = 0; i < arguments.size(); i++) {
             String time = (String) arguments.get(i);
-            String[] parameters = time.split(" ");
+            String[] parameters = time.trim().split(":");
             CarriageType carriageType = CarriageType.valueOf(parameters[0].toUpperCase().trim());
-            int checkPassenger= Integer.valueOf(parameters[1].trim());
-            if(checkPassenger<0){throw new LessZeroException();}
-            int numberOfSeats= checkPassenger;
+            int checkPassenger = Integer.valueOf(parameters[1].trim());
+            if (checkPassenger < 0) {
+                throw new LessZeroException();
+            }
+            int numberOfSeats = checkPassenger;
             int checkBaggage = Integer.valueOf(parameters[2].trim());
-            if (checkBaggage<0){throw new LessZeroException();}
+            if (checkBaggage < 0) {
+                throw new LessZeroException();
+            }
             int baggageWeight = checkBaggage;
             passengerCarriages.add(new PassengerCarriage(carriageType, numberOfSeats, baggageWeight));
         }

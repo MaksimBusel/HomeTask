@@ -10,13 +10,11 @@ import java.util.List;
 
 public class CreatorLocomotive {
 
-    public List<Locomotive> createLocomotives() {
-        TxtReader txt = new TxtReader();
+    public List<Locomotive> createLocomotives(List arguments) {
         List<Locomotive> locomotives = new ArrayList<>();
-        List arguments = txt.getArgumentsForLocomotive();
         for (int i = 0; i < arguments.size(); i++) {
             String time = (String) arguments.get(i);
-            String[] parameters = time.split(" ");
+            String[] parameters = time.trim().split(":");
             EngineType engine = EngineType.valueOf(parameters[0].toUpperCase().trim());
             int checkSpeed = Integer.valueOf(parameters[1].trim());
             if (checkSpeed<0){throw new LessZeroException();}
