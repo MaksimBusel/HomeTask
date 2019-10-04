@@ -1,6 +1,7 @@
-package by.epam.task2.locomotive;
+package by.epam.task2;
 
 import by.epam.task2.RailwayTransport;
+import by.epam.task2.entity.EngineType;
 
 public class Locomotive extends RailwayTransport {
     private EngineType engineType;
