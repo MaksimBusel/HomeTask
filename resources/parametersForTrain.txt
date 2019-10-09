@@ -1,0 +1,9 @@
+ COUPE : 74 : 130
+COMMON : 74 : 120
+any any any
+SEAT : 71 :    189
+SV 18 56
+18 12 32
+$%# 434
+      ELECTRIC : 100
+DIESEL:110
