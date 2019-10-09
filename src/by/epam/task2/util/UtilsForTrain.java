@@ -1,4 +1,4 @@
-package by.epam.task2.utils;
+package by.epam.task2.util;
 
 import by.epam.task2.PassengerCarriage;
 

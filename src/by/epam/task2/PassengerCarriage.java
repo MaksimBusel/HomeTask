@@ -2,6 +2,8 @@ package by.epam.task2;
 
 import by.epam.task2.entity.CarriageType;
 
+import java.util.Objects;
+
 public class PassengerCarriage extends RailwayTransport {
 
     private CarriageType carriageType;
@@ -47,6 +49,26 @@ public class PassengerCarriage extends RailwayTransport {
 
     public void setBaggageWeight(int baggageWeight) {
         this.baggageWeight = baggageWeight;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
+        PassengerCarriage that = (PassengerCarriage) o;
+        return ((numberOfSeats == that.numberOfSeats) && (baggageWeight == that.baggageWeight));
+    }
+
+    @Override
+    public int hashCode() {
+        int result = numberOfSeats;
+        result = 31 * result;
+        result = 31 * result + baggageWeight;
+        return result;
     }
 
     @Override

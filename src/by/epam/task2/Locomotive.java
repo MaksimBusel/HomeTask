@@ -38,6 +38,25 @@ public class Locomotive extends RailwayTransport {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
+        Locomotive that = (Locomotive) o;
+        return speed == that.speed;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = speed;
+        result = 31 * result;
+        return result * 31;
+    }
+
+    @Override
     public String toString() {
         return "Locomotive{" + "engineType=" + engineType + ", speed=" + speed + '}';
     }
