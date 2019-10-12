@@ -1,4 +1,4 @@
-package by.epam.task2;
+package by.epam.task2.entity;
 
 public abstract class RailwayTransport {
     private int wheels;
@@ -56,4 +56,10 @@ public abstract class RailwayTransport {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public int getNumberOfSeats() {
+        return 0;
+    }
+
+    public int getBaggageWeight() {return 0;}
 }

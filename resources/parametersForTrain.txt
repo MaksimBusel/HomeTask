@@ -1,9 +1,9 @@
- COUPE : 74 : 130
-COMMON : 74 : 120
-any any any
-SEAT : 71 :    189
-SV 18 56
-18 12 32
-$%# 434
-      ELECTRIC : 100
-DIESEL:110
+carriage: COUPE : 74 : 120
+carriage:COMMON : 74 : 130
+Locomotive: any :any :any
+carriage: SEAT : 18 :    189
+carriage:SV :26 :56
+Locomotive: 18 :12 :32
+something: $%# : 434
+ Locomotive:     ELECTRIC : 100
+Locomotive: DIESEL:110

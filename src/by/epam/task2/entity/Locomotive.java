@@ -1,7 +1,6 @@
-package by.epam.task2;
+package by.epam.task2.entity;
 
-import by.epam.task2.RailwayTransport;
-import by.epam.task2.entity.EngineType;
+import by.epam.task2.exception.IncorrectValueException;
 
 public class Locomotive extends RailwayTransport {
     private EngineType engineType;
@@ -12,13 +11,11 @@ public class Locomotive extends RailwayTransport {
 
     public Locomotive(EngineType engineType, int speed) {
         this.engineType = engineType;
-        this.speed = speed;
+        setSpeed(speed);
     }
 
-    public Locomotive(int wheels, int weight, int length, int width, String color, EngineType engineType, int speed) {
+    public Locomotive(int wheels, int weight, int length, int width, String color) {
         super(wheels, weight, length, width, color);
-        this.engineType = engineType;
-        this.speed = speed;
     }
 
     public EngineType getEngineType() {
@@ -34,6 +31,9 @@ public class Locomotive extends RailwayTransport {
     }
 
     public void setSpeed(int speed) {
+        if (speed < 0) {
+            throw new IncorrectValueException();
+        }
         this.speed = speed;
     }
 
@@ -52,7 +52,7 @@ public class Locomotive extends RailwayTransport {
     @Override
     public int hashCode() {
         int result = speed;
-        result = 31 * result;
+        result = 31 * result + speed;
         return result * 31;
     }
 

@@ -1,12 +1,12 @@
 package by.epam.task2.util;
 
-import by.epam.task2.PassengerCarriage;
+import by.epam.task2.entity.RailwayTransport;
 import java.util.Comparator;
 
-public class ComparatorPeople implements Comparator<PassengerCarriage> {
+public class ComparatorPeople implements Comparator<RailwayTransport> {
 
     @Override
-    public int compare(PassengerCarriage o1, PassengerCarriage o2) {
+    public int compare(RailwayTransport o1, RailwayTransport o2) {
         return o2.getNumberOfSeats() - o1.getNumberOfSeats();
     }
 

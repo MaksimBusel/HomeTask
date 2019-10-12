@@ -1,8 +1,6 @@
-package by.epam.task2;
+package by.epam.task2.entity;
 
-import by.epam.task2.entity.CarriageType;
-
-import java.util.Objects;
+import by.epam.task2.exception.IncorrectValueException;
 
 public class PassengerCarriage extends RailwayTransport {
 
@@ -15,16 +13,12 @@ public class PassengerCarriage extends RailwayTransport {
 
     public PassengerCarriage(CarriageType carriageType, int numberOfSeats, int baggageWeight) {
         this.carriageType = carriageType;
-        this.baggageWeight = baggageWeight;
-        this.numberOfSeats = numberOfSeats;
+        setBaggageWeight(baggageWeight);
+        setNumberOfSeats(numberOfSeats);
     }
 
-    public PassengerCarriage(int wheels, int weight, int length, int width, String color, CarriageType carriageType,
-                             int numberOfSeats, int baggageWeight) {
+    public PassengerCarriage(int wheels, int weight, int length, int width, String color) {
         super(wheels, weight, length, width, color);
-        this.carriageType = carriageType;
-        this.baggageWeight = baggageWeight;
-        this.numberOfSeats = numberOfSeats;
     }
 
     public CarriageType getCarriageType() {
@@ -35,19 +29,27 @@ public class PassengerCarriage extends RailwayTransport {
         this.carriageType = carriageType;
     }
 
+    @Override
     public int getNumberOfSeats() {
         return numberOfSeats;
     }
 
     public void setNumberOfSeats(int numberOfSeats) {
+        if (numberOfSeats < 0) {
+            throw new IncorrectValueException();
+        }
         this.numberOfSeats = numberOfSeats;
     }
 
+    @Override
     public int getBaggageWeight() {
         return baggageWeight;
     }
 
     public void setBaggageWeight(int baggageWeight) {
+        if (baggageWeight < 0) {
+            throw new IncorrectValueException();
+        }
         this.baggageWeight = baggageWeight;
     }
 
@@ -66,7 +68,7 @@ public class PassengerCarriage extends RailwayTransport {
     @Override
     public int hashCode() {
         int result = numberOfSeats;
-        result = 31 * result;
+        result = 31 * result + numberOfSeats;
         result = 31 * result + baggageWeight;
         return result;
     }

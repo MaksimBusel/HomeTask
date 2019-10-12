@@ -10,5 +10,6 @@ public class IncorrectValueException extends RuntimeException {
         super(message);
     }
 
-    public IncorrectValueException() {}
+    public IncorrectValueException() {
+    }
 }
