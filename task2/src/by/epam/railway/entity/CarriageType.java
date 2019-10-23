@@ -1,4 +1,4 @@
-package by.epam.task2.entity;
+package by.epam.railway.entity;
 
 public enum CarriageType {
     SEAT, COMMON, ECONOM, COUPE, SV

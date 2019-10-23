@@ -1,5 +1,6 @@
-package by.epam.task2.reader;
+package by.epam.railway.reader;
 
+import by.epam.railway.exception.IncorrectValueException;
 import org.apache.log4j.Logger;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,6 +20,7 @@ public class TxtReader {
             }
         } catch (IOException e) {
             log.error("Error reading file", e);
+            throw new IncorrectValueException();
         }
         return parametersFromFiles;
     }

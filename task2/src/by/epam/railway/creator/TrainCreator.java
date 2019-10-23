@@ -1,12 +1,11 @@
 package by.epam.railway.creator;
 
-import by.epam.task2.entity.RailwayTransport;
-import by.epam.task2.exception.NumberOfLocomotivesException;
+import by.epam.railway.entity.RailwayTransport;
+import by.epam.railway.exception.NumberOfLocomotivesException;
+import by.epam.railway.factory.FactoryRailwayTransport;
 import org.apache.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class TrainCreator {
     private static final Logger logger = Logger.getLogger(TrainCreator.class);

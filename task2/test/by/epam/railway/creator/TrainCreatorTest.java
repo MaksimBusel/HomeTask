@@ -1,19 +1,18 @@
 package by.epam.railway.creator;
 
-import by.epam.task2.entity.RailwayTransport;
-import by.epam.task2.exception.IncorrectValueException;
-import by.epam.task2.exception.InvalidTypeTransportException;
-import by.epam.task2.exception.NumberOfLocomotivesException;
+import by.epam.railway.entity.RailwayTransport;
+import by.epam.railway.exception.IncorrectValueException;
+import by.epam.railway.exception.InvalidTypeTransportException;
+import by.epam.railway.exception.NumberOfLocomotivesException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class TrainCreatorTest {
-    TrainCreator trainCreator;
-    List<String> parameters = new ArrayList<>();
+    private TrainCreator trainCreator;
+    private List<String> parameters = new ArrayList<>();
 
     @Before
     public void setUp() throws Exception {

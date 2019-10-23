@@ -1,4 +1,4 @@
-package by.epam.task2.entity;
+package by.epam.railway.entity;
 
 public abstract class RailwayTransport {
     private int wheels;

@@ -1,4 +1,4 @@
-package by.epam.task2.exception;
+package by.epam.railway.exception;
 
 public class NumberOfLocomotivesException extends RuntimeException {
 

@@ -1,6 +1,6 @@
-package by.epam.task2.entity;
+package by.epam.railway.entity;
 
-import by.epam.task2.exception.IncorrectValueException;
+import by.epam.railway.exception.IncorrectValueException;
 
 public class Locomotive extends RailwayTransport {
     private EngineType engineType;

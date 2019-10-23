@@ -1,10 +1,8 @@
 package by.epam.railway.util;
 
-import by.epam.railway.creator.TrainCreator;
-import by.epam.task2.entity.RailwayTransport;
+import by.epam.railway.entity.RailwayTransport;
 import org.apache.log4j.Logger;
 
-import java.util.Collections;
 import java.util.List;
 
 public class TrainUtils {
@@ -24,18 +22,5 @@ public class TrainUtils {
             baggage += transport.getBaggageWeight();
         }
         return baggage;
-    }
-
-    public void sortOnPassengers(List<RailwayTransport> list) {
-        Collections.sort(list, new ComparatorPeople());
-    }
-
-    public void sortOnBaggage(List<RailwayTransport> list) {
-        Collections.sort(list, new ComparatorBaggage());
-    }
-
-    public void sortOnPassengersAndBaggage(List<RailwayTransport> list) {
-        logger.info("we sort the train by passengers and luggage");
-        Collections.sort(list, new ComparatorPeople().thenComparing(new ComparatorBaggage()));
     }
 }

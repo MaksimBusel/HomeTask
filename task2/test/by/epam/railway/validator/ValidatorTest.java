@@ -5,8 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ValidatorTest {
-    Validator validator;
-    boolean check;
+    private Validator validator;
+    private boolean check;
 
     @Before
     public void setUp() throws Exception {

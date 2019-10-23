@@ -1,22 +1,24 @@
 package by.epam.railway.util;
 
-import by.epam.task2.entity.PassengerCarriage;
-import by.epam.task2.entity.CarriageType;
-import by.epam.task2.entity.RailwayTransport;
+import by.epam.railway.entity.CarriageType;
+import by.epam.railway.entity.PassengerCarriage;
+import by.epam.railway.entity.RailwayTransport;
+import by.epam.railway.sort.Sorter;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class UtilsForTrainTest {
-    TrainUtils utils;
-    List<RailwayTransport> list= new ArrayList<>();
-    Object[] arraySorted = new Object[4];
+    private TrainUtils utils;
+    private Sorter sort;
+    private List<RailwayTransport> list= new ArrayList<>();
+    private Object[] arraySorted = new Object[4];
 
     @Before
     public void setUp() throws Exception {
+        sort = new Sorter();
         utils =  new TrainUtils();
         list.add(new PassengerCarriage(CarriageType.SEAT, 67, 220));
         list.add(new PassengerCarriage(CarriageType.COUPE, 22, 80));
@@ -42,7 +44,7 @@ public class UtilsForTrainTest {
         arraySorted[1] = new PassengerCarriage(CarriageType.ECONOM, 61, 240);
         arraySorted[2] = new PassengerCarriage(CarriageType.COUPE, 22, 80);
         arraySorted[3] = new PassengerCarriage(CarriageType.SV, 22, 120);
-        utils.sortOnPassengers(list);
+        sort.sortOnPassengers(list);
         Object[] forCheck = list.toArray();
         Assert.assertArrayEquals(arraySorted, forCheck);
     }
@@ -53,7 +55,7 @@ public class UtilsForTrainTest {
         arraySorted[1] = new PassengerCarriage(CarriageType.ECONOM, 61, 240);
         arraySorted[2] = new PassengerCarriage(CarriageType.SV, 22, 120);
         arraySorted[3] = new PassengerCarriage(CarriageType.COUPE, 22, 80);
-        utils.sortOnPassengersAndBaggage(list);
+        sort.sortOnPassengersAndBaggage(list);
         Object[] forCheck = list.toArray();
         Assert.assertArrayEquals(arraySorted, forCheck);
     }

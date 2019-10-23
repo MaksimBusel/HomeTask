@@ -1,12 +1,12 @@
-package by.epam.railway.creator;
+package by.epam.railway.factory;
 
-import by.epam.task2.entity.*;
-import by.epam.task2.exception.InvalidTypeTransportException;
+import by.epam.railway.entity.*;
+import by.epam.railway.exception.InvalidTypeTransportException;
 import org.apache.log4j.Logger;
 
 public class FactoryRailwayTransport {
     private static final Logger logger = Logger.getLogger(FactoryRailwayTransport.class);
-    int countLocomotives;
+    public int countLocomotives;
 
     public RailwayTransport createRailwayTransport(String[] parameters) {
         String typeTransport = parameters[0].trim();
