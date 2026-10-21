@@ -23,4 +23,11 @@ public class TrainUtils {
         }
         return baggage;
     }
+
+    /**
+     * Average baggage weight per carriage in the train (integer division).
+     */
+    public int averageBaggageWeight(List<RailwayTransport> list) {
+        return countBaggage(list) / list.size();
+    }
 }

@@ -16,7 +16,10 @@ public class TxtReader {
         try (BufferedReader readTxt = new BufferedReader(new FileReader(pathToFile))) {
             String time;
             while ((time = readTxt.readLine()) != null) {
-                parametersFromFiles.add(time);
+                if (time.isBlank()) {
+                    continue;
+                }
+                parametersFromFiles.add(time.trim());
             }
         } catch (IOException e) {
             log.error("Error reading file", e);
