@@ -30,4 +30,9 @@ public class TrainUtils {
     public int averageBaggageWeight(List<RailwayTransport> list) {
         return countBaggage(list) / list.size();
     }
+
+    public RailwayTransport firstCarriage(List<RailwayTransport> list) {
+        System.out.println("DEBUG first carriage, size=" + list.size());
+        return list.get(0);
+    }
 }

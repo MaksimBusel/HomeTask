@@ -7,6 +7,9 @@ public class CarriagePeopleComparator implements Comparator<RailwayTransport> {
 
     @Override
     public int compare(RailwayTransport o1, RailwayTransport o2) {
-        return o2.getNumberOfSeats() - o1.getNumberOfSeats();
+        if (o1.getNumberOfSeats() > o2.getNumberOfSeats()) {
+            return 1;
+        }
+        return -1;
     }
 }
