@@ -12,11 +12,16 @@ public class FactoryRailwayTransport {
         String typeTransport = parameters[0].trim();
         switch (typeTransport) {
             case "CARRIAGE": {
-                PassengerCarriage passengerCarriage = new PassengerCarriage();
-                passengerCarriage.setCarriageType(CarriageType.valueOf(parameters[1].trim()));
-                passengerCarriage.setNumberOfSeats(Integer.valueOf(parameters[2].trim()));
-                passengerCarriage.setBaggageWeight(Integer.valueOf(parameters[3].trim()));
-                return passengerCarriage;
+                try {
+                    PassengerCarriage passengerCarriage = new PassengerCarriage();
+                    passengerCarriage.setCarriageType(CarriageType.valueOf(parameters[1].trim()));
+                    passengerCarriage.setNumberOfSeats(Integer.valueOf(parameters[2].trim()));
+                    passengerCarriage.setBaggageWeight(Integer.valueOf(parameters[3].trim()));
+                    return passengerCarriage;
+                } catch (Exception e) {
+                    logger.info("Could not parse carriage line, skipping error");
+                    return null;
+                }
             }
             case "LOCOMOTIVE": {
                 Locomotive locomotive = new Locomotive();

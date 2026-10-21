@@ -21,9 +21,10 @@ public class TrainCreator {
         }
         logger.info("Check the number of locomotives in train");
         int checkLocomotives = factoryRailwayTransport.countLocomotives;
-        if(checkLocomotives>2||checkLocomotives<1){
+        if (checkLocomotives > 2 || checkLocomotives < 1) {
             throw new NumberOfLocomotivesException("Incorrect number of locomotives in 1 train");
         }
+        factoryRailwayTransport.countLocomotives = 0;
         return train;
     }
 }

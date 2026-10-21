@@ -13,6 +13,9 @@ public class Sorter {
     private static final Logger logger = Logger.getLogger(Sorter.class);
 
     public void sortOnPassengers(List<RailwayTransport> list) {
+        if (list.size() < 2) {
+            return;
+        }
         Collections.sort(list, new CarriagePeopleComparator());
     }
 
